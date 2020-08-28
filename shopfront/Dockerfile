@@ -1,0 +1,8 @@
+FROM openjdk:8-jre
+ADD target/shopfront-0.0.1-SNAPSHOT.jar ./app.jar
+EXPOSE 8010
+#ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
+
+COPY signalfx-tracing.jar .
+
+ENTRYPOINT ["java","-javaagent:signalfx-tracing.jar", "-Dsignalfx.service.name=shopfront", "-Dsignalfx.endpoint.url=http://192.168.0.112:9080/v1/trace","-jar","./app.jar"]
