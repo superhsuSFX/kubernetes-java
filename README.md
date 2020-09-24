@@ -1,3 +1,19 @@
+# Tested on Ubuntu 18.04 ( k8s master )
+
+( Assumes SignalFx Smart Agent is installed as Daemonset according to: 
+
+https://docs.signalfx.com/en/latest/integrations/kubernetes/k8s-quick-install.html
+
+# If you have RBAC enabled you must give proper rights to SignalfxAgent as follows:
+
+kubectl create clusterrolebinding add-on
+-cluster-admin --clusterrole=cluster-admin --serviceaccount=default:signalfx-agent 
+
+# You will also need:
+Git installed
+Java 8 or above installed
+Maven Installed
+docker Installed.
 
 #Git clone to your k8s Master 
  https://github.com/shabuhabs/kubernetes-java.git
