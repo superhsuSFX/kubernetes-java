@@ -12,6 +12,8 @@ kubectl create clusterrolebinding add-on
 # You will also need:
 Git, Java 8 or above, Maven, Docker.
 
+# Steps
+
 #Git clone to your k8s Master 
  https://github.com/shabuhabs/kubernetes-java.git
 	
