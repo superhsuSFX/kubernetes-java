@@ -10,10 +10,7 @@ kubectl create clusterrolebinding add-on
 -cluster-admin --clusterrole=cluster-admin --serviceaccount=default:signalfx-agent 
 
 # You will also need:
-Git installed
-Java 8 or above installed
-Maven Installed
-docker Installed.
+Git, Java 8 or above, Maven, Docker.
 
 #Git clone to your k8s Master 
  https://github.com/shabuhabs/kubernetes-java.git
