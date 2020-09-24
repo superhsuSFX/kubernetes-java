@@ -23,7 +23,9 @@ cd kubernetes-java
 cd shopfront
 
 docker build -t shabushabu/djshopfront:3.0 .
+
 #login to docker
+
 docker push shabushabu/djshopfront:3.0
 
 Mvn clean install
