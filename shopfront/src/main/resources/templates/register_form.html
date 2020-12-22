@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Splunk Apm Registration</title>
+<style type="text/css">
+	label {
+		display: inline-block;
+		width: 200px;
+		margin: 5px;
+		text-align: left;
+	}
+	input[type=text], input[type=password], select {
+		display: inline-block;
+		width: 200px;
+	}
+	input[type=radio] {
+		margin-left: 45px;
+	}
+	input[type=checkbox] {
+		margin-right: 190px;
+	}	
+	button {
+		padding: 5px;
+		margin: 10px;
+	}
+</style>
+</head>
+<body>
+	<div align="center">
+		<h1>User Registration</h1>
+		<form action="#" th:action="@{/register}" method="post" th:object="${user}">
+			<label>Full name:</label>
+			<input type="text" th:field="*{name}" /><br/>
+			
+			<label>E-mail:</label>
+			<input type="text" th:field="*{email}" /><br/>
+			
+			 <select>
+        		<option value="books">Books</option>
+        		<option value="html">HTML</option>
+        		<option value="css">CSS</option>
+        		<option value="php">PHP</option>
+        		<option value="js">JavaScript</option>
+      		</select>
+      		
+      		<label>Favorite Color:</label>
+			<input type="radio" th:field="*{gender}" value="Blue" />Blue
+			<input type="radio" th:field="*{gender}" value="Green" />Green
+			<input type="radio" th:field="*{gender}" value="Red" />Red<br/>
+			
+			<button type="submit">Register</button>		
+		</form>
+	</div>
+</body>
+</html>
