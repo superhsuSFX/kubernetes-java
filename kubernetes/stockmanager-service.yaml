@@ -28,9 +28,14 @@ spec:
     spec:
       containers:
       - name: stockmanager
-        image: shabushabu/djstockmanager:1.0
+        image: shabushabu/stockmanager:1.5
         ports:
         - containerPort: 8030
+        env:
+        - name: SIGNALFX_AGENT_HOST
+          valueFrom: 
+            fieldRef:
+              fieldPath:  status.hostIP
         livenessProbe:
           httpGet:
             path: /health
