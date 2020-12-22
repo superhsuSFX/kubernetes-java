@@ -8,7 +8,7 @@ metadata:
 spec:
   type: NodePort
   selector:
-    app: shopfront2
+    app: shopfront
   ports:
   - protocol: TCP
     port: 8010
@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
       - name: djshopfront
-        image: shabushabu/djshopfront:latest
+        image: shabushabu/djshopfront:1.2
         ports:
         - containerPort: 8010
         env:
