@@ -1,4 +1,4 @@
-package net.codejava;
+package com.shabushabu.djshopping.shopfront.controllers;
 
 import java.sql.Date;
 
@@ -35,7 +35,7 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "User [name=" + name + ", email=" + email + ", color=" + color + ", "]";
+		return email;
 	}
 
 }

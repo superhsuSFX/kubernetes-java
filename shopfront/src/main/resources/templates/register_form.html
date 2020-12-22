@@ -35,19 +35,11 @@
 			
 			<label>E-mail:</label>
 			<input type="text" th:field="*{email}" /><br/>
-			
-			 <select>
-        		<option value="books">Books</option>
-        		<option value="html">HTML</option>
-        		<option value="css">CSS</option>
-        		<option value="php">PHP</option>
-        		<option value="js">JavaScript</option>
-      		</select>
       		
       		<label>Favorite Color:</label>
-			<input type="radio" th:field="*{gender}" value="Blue" />Blue
-			<input type="radio" th:field="*{gender}" value="Green" />Green
-			<input type="radio" th:field="*{gender}" value="Red" />Red<br/>
+			<input type="radio" th:field="*{color}" value="Blue" />Blue
+			<input type="radio" th:field="*{color}" value="Green" />Green
+			<input type="radio" th:field="*{color}" value="Red" />Red<br/>
 			
 			<button type="submit">Register</button>		
 		</form>

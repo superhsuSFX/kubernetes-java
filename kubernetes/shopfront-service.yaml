@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
       - name: djshopfront
-        image: shabushabu/djshopfront:1.2
+        image: shabushabu/shopfront:1.5
         ports:
         - containerPort: 8010
         env:
