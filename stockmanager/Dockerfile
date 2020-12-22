@@ -5,4 +5,4 @@ EXPOSE 8030
 
 COPY signalfx-tracing.jar .
 
-ENTRYPOINT ["java","-javaagent:./signalfx-tracing.jar -Djava.security.egd=file:/dev/./urandom -Dsignalfx.service.name=stockmanager -Dsignalfx.endpoint.url=http://192.168.0.112:9080/v1/trace","-jar","/app.jar"]
+ENTRYPOINT ["java","-javaagent:./signalfx-tracing.jar", "-Dsignalfx.service.name=stockmanager" ,"-jar","/app.jar"]
