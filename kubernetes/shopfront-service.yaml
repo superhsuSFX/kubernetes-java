@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
       - name: djshopfront
-        image: shabushabu/shopfront:1.5
+        image: shabushabu/shopfront:1.10
         ports:
         - containerPort: 8010
         env:
@@ -36,10 +36,10 @@ spec:
             valueFrom:
               fieldRef:
                 fieldPath: status.hostIP
-        livenessProbe:
-          httpGet:
-            path: /health
-            port: 8010
-          initialDelaySeconds: 30
-          timeoutSeconds: 1 
+                #livenessProbe:
+                #httpGet:
+                #path: /health
+                #port: 8010
+                #initialDelaySeconds: 30
+                #timeoutSeconds: 1 
 

@@ -4,10 +4,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-
+import io.opentracing.Scope;
+import io.opentracing.Span;
+import io.opentracing.Tracer;
+import io.opentracing.util.GlobalTracer;
 import com.shabushabu.djshopping.shopfront.services.ProductService;
 
 @Controller
@@ -16,13 +20,31 @@ public class HomeController {
     @Autowired
     private ProductService productService;
 
-    
-/*    @RequestMapping("/")
-    public String index(Model model) {
+   @RequestMapping("/") 
+   public String usingRequestParam(Model model, @RequestParam(value="name", required=true) String thename, @RequestParam(value="color", required=true) String thecolor) {
+     
+     final Tracer s_tracer = GlobalTracer.get();
+     final Span span = s_tracer.buildSpan("usingRequestParam").start();
+     try (Scope scope = s_tracer.scopeManager().activate(span)) {
+         span.setTag("name",thename);
+         span.setTag("favcolor", thecolor);
+	 span.setTag("poop", "brown");
+	 model.addAttribute("products", productService.getProducts());
+		   	     
+         } finally {
+           span.finish();
+	 }		       
+     return "index";
+   } 
+   
+  /* 
+   @RequestMapping("/")
+   public String index(Model model) {
 	model.addAttribute("products", productService.getProducts());
         return "index";
     }
-*/    
+  */
+/*    
     @GetMapping("/register")
     public String showForm(Model model) {
         User user = new User();
@@ -41,6 +63,18 @@ public class HomeController {
         model.addAttribute("products", productService.getProducts());
         return "product_index";
     }
+ */
+  /*  @GetMapping("/greeting")
+    public String greetingForm(Model model) {
+      model.addAttribute("greeting", new Greeting());
+    return "greeting";
+    }
 
+    @PostMapping("/greeting")
+    public String greetingSubmit(@ModelAttribute Greeting greeting, Model model) {
+      model.addAttribute("greeting", greeting);
+      return "result";
+   }
+   */
 	
 }
