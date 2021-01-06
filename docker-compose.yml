@@ -7,11 +7,11 @@ services:
     links:
       - products
       - stock
-  productcatalogue:
+  products:
     image: shabushabu/products
     ports:
      - "8020:8020"
-  stockmanager:
+  stock:
     image: shabushabu/stock
     ports:
      - "8030:8030"
