@@ -1,4 +1,4 @@
-package com.shabushabu.shopping.products.healthchecks;
+package com.shabushabu.javashop.products.healthchecks;
 
 import com.codahale.metrics.health.HealthCheck;
 

@@ -1,4 +1,4 @@
-package com.shabushabu.shoppping.products.configuration;
+package com.shabushabu.javashop.products.configuration;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.dropwizard.Configuration;

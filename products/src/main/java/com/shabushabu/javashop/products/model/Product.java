@@ -1,4 +1,4 @@
-package com.shabushabu.shopping.products.model;
+package com.shabushabu.javashop.products.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

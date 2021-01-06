@@ -1,4 +1,4 @@
-package com.shabushabu.shopping.products.resources;
+package com.shabushabu.javashop.products.resources;
 
 import com.codahale.metrics.annotation.Timed;
 import com.google.inject.Inject;

@@ -1,4 +1,4 @@
-package com.shabushabu.shopping.products.services;
+package com.shabushabu.javashop.products.services;
 
 import com.shabushabu.djshopping.productcatalogue.model.Product;
 

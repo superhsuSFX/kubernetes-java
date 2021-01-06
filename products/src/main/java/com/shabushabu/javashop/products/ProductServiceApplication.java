@@ -1,4 +1,4 @@
-package com.shabushabu.shopping.products;
+package com.shabushabu.javashop.products;
 
 import com.google.inject.Guice;
 import com.google.inject.Injector;
