@@ -28,7 +28,6 @@ public class HomeController {
      try (Scope scope = s_tracer.scopeManager().activate(span)) {
          span.setTag("name",thename);
          span.setTag("favcolor", thecolor);
-	 span.setTag("poop", "brown");
 	 model.addAttribute("products", productService.getProducts());
 		   	     
          } finally {
