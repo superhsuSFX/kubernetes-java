@@ -38,7 +38,12 @@ spec:
                 fieldPath: status.hostIP
         livenessProbe:
           httpGet:
+<<<<<<< HEAD
           path: /healthcheck
           port: 8025
+=======
+            path: /healthcheck
+            port: 8025
+>>>>>>> branch 'shabu' of https://github.com/shabuhabs/kubernetes-java.git
           initialDelaySeconds: 30
           timeoutSeconds: 1

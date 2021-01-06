@@ -2,7 +2,7 @@ package com.shabushabu.javashop.products.resources;
 
 import com.codahale.metrics.annotation.Timed;
 import com.google.inject.Inject;
-import com.shabushabu.javashop.produts.services.ProductService;
+import com.shabushabu.javashop.products.services.ProductService;
 import com.shabushabu.javashop.products.model.Product;
 
 import javax.ws.rs.GET;
