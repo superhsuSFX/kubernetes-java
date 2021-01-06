@@ -5,4 +5,4 @@ EXPOSE 8010
 
 COPY signalfx-tracing.jar .
 
-ENTRYPOINT ["java","-javaagent:signalfx-tracing.jar", "-Dsignalfx.service.name=shopfront","-jar","./app.jar"]
+ENTRYPOINT ["java","-javaagent:signalfx-tracing.jar", "-Dsignalfx.service.name=storefront","-jar","./app.jar"]
