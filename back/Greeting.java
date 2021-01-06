@@ -1,4 +1,4 @@
-package com.shabushabu.djshopping.shopfront.controllers;
+package com.shabushabu.javashop.shop.controllers;
 
 public class Greeting {
 

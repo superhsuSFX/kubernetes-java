@@ -9,8 +9,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
-import com.shabushabu.djshopping.stockmanager.StockManagerApplication;
-import com.shabushabu.djshopping.stockmanager.model.Stock;
+import com.shabushabu.javashop.stock.StockManagerApplication;
+import com.shabushabu.javashop.stock.model.Stock;
 
 import java.util.Arrays;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.shabushabu.djshopping.stockmanager;
+package com.shabushabu.javashop.stock;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
