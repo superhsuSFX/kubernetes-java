@@ -1,17 +1,17 @@
-version: '2'
+version: '3'
 services:
-  shopfront:
-    image: shabushabu/djshopfront
+  shop:
+    image: shabushabu/shop
     ports:
      - "8010:8010"
     links:
-      - productcatalogue
-      - stockmanager
-  productcatalogue:
-    image: shabushabu/djproductcatalogue
+      - products
+      - stock
+  products:
+    image: shabushabu/products
     ports:
      - "8020:8020"
-  stockmanager:
-    image: shabushabu/djstockmanager
+  stock:
+    image: shabushabu/stock
     ports:
      - "8030:8030"

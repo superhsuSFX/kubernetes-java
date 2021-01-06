@@ -4,11 +4,6 @@
 
 https://docs.signalfx.com/en/latest/integrations/kubernetes/k8s-quick-install.html
 
-# If you have RBAC enabled you must give proper rights to SignalfxAgent as follows:
-
-kubectl create clusterrolebinding add-on
--cluster-admin --clusterrole=cluster-admin --serviceaccount=default:signalfx-agent 
-
 # You will also need:
 Git, Java 8 or above, Maven, Docker.
 
@@ -19,16 +14,22 @@ Git, Java 8 or above, Maven, Docker.
 	
 cd kubernetes-java
 
-cd shopfront
+# If you just want to run the example
+kubectl apply -f shop.yaml
 
-docker build -t shabushabu/djshopfront:3.0 .
-
-#login to docker
-
-docker push shabushabu/djshopfront:3.0
+# If you want to build it . . .
+cd shop
 
 Mvn clean install
 
+# docker build -t YourNameHere/shabu-shop:1.0 .
+
+#login to docker
+
+docker push YourNameHere/shabu-shop:1.0
+
 cd ../kubernetes
 
-kubectl apply -f shopfront-service.yaml
+vi shop.yaml # Add your image name above YourNameHere/shabu-shop:1.0 to the shop.yml file.
+kubectl apply -f shop.yaml
+
