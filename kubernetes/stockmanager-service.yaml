@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
       - name: stockmanager
-        image: shabushabu/stockmanager:1.6
+        image: shabushabu/stockmanager:1.7
         ports:
         - containerPort: 8030
         env:

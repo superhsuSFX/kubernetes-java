@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
       - name: productcatalogue
-        image: shabushabu/productcatalogue:1.5
+        image: shabushabu/productcatalogue:1.6
         ports:
         - containerPort: 8020
         env:
@@ -37,8 +37,8 @@ spec:
               fieldRef:
                 fieldPath: status.hostIP
         livenessProbe:
-          httpGet:
-            path: /healthcheck
-            port: 8025
-          initialDelaySeconds: 30
-          timeoutSeconds: 1
+          #httpGet:
+          #  path: /healthcheck
+           # port: 8025
+          #initialDelaySeconds: 30
+          #timeoutSeconds: 1
