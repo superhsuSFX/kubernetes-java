@@ -1,6 +1,6 @@
 package com.shabushabu.javashop.products.services;
 
-import com.shabushabu.javahop.products.model.Product;
+import com.shabushabu.javashop.products.model.Product;
 
 import java.math.BigDecimal;
 import java.util.*;
