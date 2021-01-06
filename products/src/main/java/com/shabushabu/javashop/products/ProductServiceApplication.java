@@ -5,9 +5,9 @@ import com.google.inject.Injector;
 import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
-import com.shabushabu.djshopping.productcatalogue.healthchecks.BasicHealthCheck;
-import com.shabushabu.djshopping.productcatalogue.configuration.ProductServiceConfiguration;
-import com.shabushabu.djshopping.productcatalogue.resources.ProductResource;
+import com.shabushabu.javashop.products.healthchecks.BasicHealthCheck;
+import com.shabushabu.javashop.products.configuration.ProductServiceConfiguration;
+import com.shabushabu.javashop.products.resources.ProductResource;
 
 public class ProductServiceApplication extends Application<ProductServiceConfiguration> {
     public static void main(String[] args) throws Exception {
