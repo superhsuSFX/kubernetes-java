@@ -38,7 +38,7 @@ public class HomeController {
    }
    
    @RequestMapping(value="/", method = RequestMethod.POST)
-   public String showWelcomePage(ModelMap model, @RequestParam String name, @RequestParam String color) {
+   public String setUser(Model model, @RequestParam String name, @RequestParam String color) {
 
        final Tracer s_tracer = GlobalTracer.get();
        final Span span = s_tracer.buildSpan("login").start();
