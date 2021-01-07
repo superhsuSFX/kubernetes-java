@@ -4,7 +4,6 @@ import java.sql.Date;
 
 public class User {
 	private String name;
-	private String email;
 	private String color;
 
 	public String getName() {
@@ -15,15 +14,6 @@ public class User {
 		this.name = name;
 	}
 
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	
 	public String getColor() {
 		return color;
 	}
@@ -32,10 +22,9 @@ public class User {
 		this.color = color;
 	}
 
-
 	@Override
 	public String toString() {
-		return email;
+		return "name:" + name + " color:" + color ;
 	}
 
 }

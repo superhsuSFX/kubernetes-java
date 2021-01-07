@@ -38,11 +38,26 @@ public class HomeController {
      return "index";
    }
    
-   @RequestMapping(value="/", method = RequestMethod.POST)
-   public String setUser(Model model, @RequestParam String name, @RequestParam String color) {
+   
+    @PostMapping("/adduser")
+    public String addUser(@Valid User user, Model model) {
+    	 final Tracer s_tracer = GlobalTracer.get();
+         final Span span = s_tracer.buildSpan("adduser").start();
+         try (Scope scope = s_tracer.scopeManager().activate(span)) {
+             span.setTag("name", user.getName());
+             span.setTag("favcolor", user.getColor());
+             model.addAttribute("products", productService.getProducts()); 	     
+         } finally {
+               span.finish();
+         }		       
+         return "index";
+    }
+ /*  
+   @RequestMapping(value="/adduser", method = RequestMethod.POST)
+   public String setUser(Model model,  @RequestParam String name, @RequestParam String color) {
 
        final Tracer s_tracer = GlobalTracer.get();
-       final Span span = s_tracer.buildSpan("login").start();
+       final Span span = s_tracer.buildSpan("adduser").start();
        try (Scope scope = s_tracer.scopeManager().activate(span)) {
            span.setTag("name", name);
            span.setTag("favcolor", color);
@@ -53,7 +68,7 @@ public class HomeController {
            }		       
        return "index";
    }
-
+*/
    
   /* 
    @RequestMapping("/")
