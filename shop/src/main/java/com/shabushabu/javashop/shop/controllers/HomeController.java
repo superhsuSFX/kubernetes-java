@@ -30,7 +30,7 @@ public class HomeController {
      try (Scope scope = s_tracer.scopeManager().activate(span)) {
          span.setTag("name",thename);
          span.setTag("favcolor", thecolor);
-         model.addAttribute("user", new User())
+         model.addAttribute("user", new User());
          model.addAttribute("products", productService.getProducts());
 		   	     
          } finally {
@@ -41,7 +41,7 @@ public class HomeController {
    
    
     @PostMapping("/adduser")
-    public String addUser(@Valid User user, Model model) {
+    public String addUser(@ModelAttribute User user, Model model) {
     	 final Tracer s_tracer = GlobalTracer.get();
          final Span span = s_tracer.buildSpan("adduser").start();
          try (Scope scope = s_tracer.scopeManager().activate(span)) {
