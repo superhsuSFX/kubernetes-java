@@ -20,7 +20,8 @@ public class HomeController {
     @Autowired
     private ProductService productService;
 
-   @RequestMapping("/") 
+ //  @RequestMapping("/") 
+   @RequestMapping(value="/", method = RequestMethod.GET)
    public String usingRequestParam(Model model, @RequestParam(value="name", required=true) String thename, @RequestParam(value="color", required=true) String thecolor) {
      
      final Tracer s_tracer = GlobalTracer.get();
@@ -34,7 +35,24 @@ public class HomeController {
            span.finish();
 	 }		       
      return "index";
-   } 
+   }
+   
+   @RequestMapping(value="/", method = RequestMethod.POST)
+   public String showWelcomePage(ModelMap model, @RequestParam String name, @RequestParam String color) {
+
+       final Tracer s_tracer = GlobalTracer.get();
+       final Span span = s_tracer.buildSpan("login").start();
+       try (Scope scope = s_tracer.scopeManager().activate(span)) {
+           span.setTag("name", name);
+           span.setTag("favcolor", color);
+           model.addAttribute("products", productService.getProducts());
+  		   	     
+           } finally {
+             span.finish();
+           }		       
+       return "index";
+   }
+
    
   /* 
    @RequestMapping("/")
