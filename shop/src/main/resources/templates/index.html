@@ -29,14 +29,10 @@
 <body>
 
 
-<div>
-    <div class="row">
+<div>   
     
-    <div>
-    		<img th:src="splunk.jpg" alt="logo" width="200" height="200" />
-            <h1 class="page-header">Splunk Javashop</h1>
-    </div>       
-        
+    <div><div style="float:left"><img th:src="splunk.jpg" alt="logo" width="200" height="200" /></div><div><h1>Javashop</h1></div></div>
+   	
      <div>
         <form action="#" th:action="@{/adduser}" th:object="${user}" method="post">
     	<p>Name:  <input type="text" th:field="*{name}" /></p>
