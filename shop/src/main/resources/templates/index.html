@@ -29,43 +29,24 @@
 <body>
 
 
-<nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container-fluid" style="background-color: #ffffff">
-        <div class="navbar-header">
-            <img th:src="splunk.jpg" alt="logo" width="200" height="200" />
-        </div>
-    </div>
-</nav>
-
-<div class="container-fluid">
+<div>
     <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
-            <ul class="nav nav-sidebar">
-                <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
-            </ul>
-        </div>
-       
+    
+    <div>
+    		<img th:src="splunk.jpg" alt="logo" width="200" height="200" />
             <h1 class="page-header">Splunk Javashop</h1>
-            
-        <!--  
-             <form action="#" th:action="@{/adduser}" method="post">
-                        
-    			<label for="name">Name</label>
-    			<input type="text" th:field="*{name}" class="form-control" id="name" placeholder="Name">
-    			<label for="color">Color</label>
-    			<input type="text" th:field="*{color}" class="form-control" id="color" placeholder="Color">           
-        		<div class="row">
-            		<div>
-                		<input type="submit" class="btn btn-primary" value="Add User">
-            		</div>
-        		</div>    
-			</form>
-          -->
-          
-          
+    </div>       
+        
+     <div>
         <form action="#" th:action="@{/adduser}" th:object="${user}" method="post">
     	<p>Name:  <input type="text" th:field="*{name}" /></p>
-    	
+    	    <!--    <form method="post">
+        		Name : <input type="text" name="name" />
+        		Color : <input type="text" name="color" /> 
+        		<input type="submit" />
+    		</form>
+    		
+    	-->
     	<p>Color: <select th:field="*{color}">
     		<option th:value="Blue" th:text="Blue"></option>
     		<option th:value="Green" th:text="Green"></option>
@@ -78,13 +59,9 @@
         <input type="reset" value="Reset" />
 	</p> 
 	</form> 
-          <!--    <form method="post">
-        		Name : <input type="text" name="name" />
-        		Color : <input type="text" name="color" /> 
-        		<input type="submit" />
-    		</form>
-    		
-    	-->
+	
+	</div>
+      
             <h2 class="sub-header">Product List</h2>
             <div class="table-responsive">
 
@@ -113,7 +90,7 @@
             </div>
         </div>
     </div>
-</div>
+
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
