@@ -54,7 +54,7 @@
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
             <h1 class="page-header">Splunk Javashop</h1>
             
-           /* 
+        <!--  
              <form action="#" th:action="@{/adduser}" method="post">
                         
     			<label for="name">Name</label>
@@ -67,10 +67,10 @@
             		</div>
         		</div>    
 			</form>
-          */
+          -->
           
           
-        <form action="#" th:action="@{/add}" th:object="${user}" method="post">
+        <form action="#" th:action="@{/adduser}" th:object="${user}" method="post">
     	<p>Id: <input type="text" th:field="*{name}" /></p>
         <p>Message: <input type="text" th:field="*{color}" /></p>
         <p><input type="submit" value="Submit" /> 

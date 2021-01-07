@@ -30,7 +30,8 @@ public class HomeController {
      try (Scope scope = s_tracer.scopeManager().activate(span)) {
          span.setTag("name",thename);
          span.setTag("favcolor", thecolor);
-	 model.addAttribute("products", productService.getProducts());
+         model.addAttribute("user", new User())
+         model.addAttribute("products", productService.getProducts());
 		   	     
          } finally {
            span.finish();
