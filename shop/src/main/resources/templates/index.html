@@ -8,15 +8,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
+  <img src="splunk.jpg" alt="logo" />
+  
     <title>JavaShop</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
-
-    <!-- Optional theme -->
+<!--
+    <!-- Optional theme
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
           integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"/>
+-->
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
@@ -34,7 +37,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Docker Java Shopfront</a>
+            <a class="navbar-brand" href="#">Splunk Java Shop</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
@@ -71,8 +74,8 @@
           
           
         <form action="#" th:action="@{/adduser}" th:object="${user}" method="post">
-    	<p>Id: <input type="text" th:field="*{name}" /></p>
-        <p>Message: <input type="text" th:field="*{color}" /></p>
+    	<p>Name: <input type="text" th:field="*{name}" /></p>
+        <p>Color: <input type="text" th:field="*{color}" /></p>
         <p><input type="submit" value="Submit" /> 
         
         <input type="reset" value="Reset" />
